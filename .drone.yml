@@ -28,13 +28,10 @@ pipeline:
       - ./vendor/bin/phpunit
   ssh:
     image: appleboy/drone-ssh
-    host: 192.168.99.250
+    host: 139.59.123.108
     username: root
     password: [ ssh_password ]
     port: 22
     script:
       - echo hello
       - echo world
-+   when:
-+     status: success
-+     event: tag
